@@ -85,8 +85,8 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-heading" style="font-size:51px;">The Flaws and Frauds in Oversea Future</div>
-                <div class="intro-lead-in" style="font-size:21px;"><bold>How Study Abroad Agencies in China Give Students False Hope of Oversea Education</bold></div>
+                <div class="intro-heading" style="font-size:51px; color:#222222">The Flaws and Frauds in Oversea Future</div>
+                <div class="intro-lead-in" style="font-size:21px; color:#222222"><bold>How Study Abroad Agencies in China Give Students False Hope of Oversea Education</bold></div>
                 <a href="#services" class="page-scroll btn btn-xl" style="text-transform:none">Inside</a>
             </div>
         </div>
@@ -133,15 +133,157 @@
             </div>
             <div class="row">
                 <div class="col-md-2">
-                    <font size="1"> (Caption: A general process of US schools' application, include undergraduates and postgraduates.) </font>
+                    <font size="1"> (Caption: This graph includes Chinese students' major choice in the US. STEM: Science, Technology, Engineering, and Math; Business and management; Education and Intensive English; Social Science and humanities; Fine/applied arts &amp; Other and undecleared.) </font>
                 </div>
-                <div class="col-md-8 col-sm-6">
-                    <img src="../img/nd0.jpg" alt="" style="width:480px;height:580px;">
-                </div>
-                <div class="col-md-2">
+                <div class="col-md-10 col-sm-8">
+                     <div class="col-md-8 col-sm-6" id="chart3" style="width: 700px;height:500px;">
+<script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('chart3'));
+           var option = {
+    timeline : {
+        data : [
+            '2009', '2010', '2011', '2012','2013','2014','2015'
+        ],
+        symbolRotate :'30',
+        playInterval :'1000',
+        loop:true,
+        axisType:'category',
+        autoPlay:true,
+        symbol:'circle'
+    },
+    
+    options : [
+        {
+            title : {
+                text: 'Chinese Students Majors Distribution in the US',
+                textAlign:'left'
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {d}%"
+            },
+            
+            legend: {
+                data:['STEM','Business','Education & English','Social Science','Fine Arts','Others'],
+                top:'30px'
+            },
+            series : [
+                {
+                    name:'Chinese Students Majors Distribution in the US (2009)',
+                    type:'pie',
+                    data:[
+                        {value: 45.6,  name:'STEM'},
+                        {value: 24.3,  name:'Business'},
+                        {value: 6.8,  name:'Education & English'},
+                        {value: 7.8, name:'Social Science'},
+                        {value: 2.8,  name:'Fine Arts'},
+                        {value: 12.7,  name:'Others'}
+                    ]
+                }
+            ]
+        },
+        {
+            series : [
+                {
+                    name:'Chinese Students Majors Distribution in the US (2010)',
+                    type:'pie',
+                    data:[
+                         {value: 43.3,  name:'STEM'},
+                        {value: 27.5,  name:'Business'},
+                        {value: 6.4,  name:'Education & English'},
+                        {value: 8.2, name:'Social Science'},
+                        {value: 3.4,  name:'Fine Arts'},
+                        {value: 11.2,  name:'Others'}
+                    ]
+                }
+            ]
+        },
+        {
+            series : [
+                {
+                    name:'Chinese Students Majors Distribution in the US (2011)',
+                    type:'pie',
+                    data:[
+                         {value: 42.2,  name:'STEM'},
+                        {value: 28.7,  name:'Business'},
+                        {value: 4.5,  name:'Education & English'},
+                        {value: 9, name:'Social Science'},
+                        {value: 3.8,  name:'Fine Arts'},
+                        {value: 11.8,  name:'Others'}
+                    ]
+                }
+            ]
+        },
+        {
+            series : [
+                {
+                   name:'Chinese Students Majors Distribution in the US (2012)',
+                    type:'pie',
+                    data:[
+                         {value: 40.5,  name:'STEM'},
+                        {value: 29,  name:'Business'},
+                        {value: 4.9,  name:'Education & English'},
+                        {value: 9.2, name:'Social Science'},
+                        {value: 4.9,  name:'Fine Arts'},
+                        {value: 11.5,  name:'Others'}
+                    ]
+                }
+            ]
+        },
+        {
+            series : [
+                {
+                    name:'Chinese Students Majors Distribution in the US (2013)',
+                    type:'pie',
+                    data:[
+                         {value: 41.6,  name:'STEM'},
+                        {value: 28,  name:'Business'},
+                        {value: 4.5,  name:'Education & English'},
+                        {value: 9, name:'Social Science'},
+                        {value: 5.3,  name:'Fine Arts'},
+                        {value: 11.6,  name:'Others'}
+                    ]
+                }
+            ]
+        },
+        {
+            series : [
+                {
+                    name:'Chinese Students Majors Distribution in the US (2014)',
+                    type:'pie',
+                    data:[
+                         {value: 42.4,  name:'STEM'},
+                        {value: 26.5,  name:'Business'},
+                        {value: 4.5,  name:'Education & English'},
+                        {value: 8.7, name:'Social Science'},
+                        {value: 5.6,  name:'Fine Arts'},
+                        {value: 12.2,  name:'Others'}
+                    ]
+                }
+            ]
+        },
+        {
+            series : [
+                {
+                    name:'Chinese Students Majors Distribution in the US (2015)',
+                    type:'pie',
+                    data:[
+                         {value: 42.7,  name:'STEM'},
+                        {value: 24.3,  name:'Business'},
+                        {value: 3.9,  name:'Education & English'},
+                        {value: 9.7, name:'Social Science'},
+                        {value: 6.5,  name:'Fine Arts'},
+                        {value: 12.9,  name:'Others'}
+                    ]
+                }
+            ]
+        },
+    ]
+};
+myChart.setOption(option)
+              </script>      
                 </div>
             </div>
-            <br>
             <div class="row">
                 <div class="col-md-2">
                 </div>
@@ -263,7 +405,7 @@
                     <font size="1"> (Caption: Differences between an study-abroad agent and a consultant.) </font>
                 </div>
                 <div class="col-md-8 col-sm-6">
-                    <img src="../img/nd0.jpg" alt="" style="width:480px;height:580px;">
+                    <img src="img/nd0.jpg" alt="" style="width:480px;height:580px;">
                 </div>
                 <div class="col-md-2">
                 </div>
