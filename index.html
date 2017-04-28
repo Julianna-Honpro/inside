@@ -333,32 +333,162 @@ myChart.setOption(option)
                 <div class="col-md-2">
                     <font size="1"> (Caption: Hottest Destination for Chinese Students, 2016. Source: Ministry of Education of China) </font>
                 </div>
-      <div class="col-md-8 col-sm-6" id="main" style="width: 600px;height:400px;">
+      <div class="col-md-8 col-sm-6" id="main" style="width: 800px;height:400px;">
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));
+var rawData = [{
+    value: 10,
+    children: [{
+        name: 'USA',
+        value: 37.34,
+        itemStyle: {
+            normal: {
+                color: '#00838C'
+            }
+        }
+    }, {
+        name: 'UK',
+        value: 25.11,
+        itemStyle: {
+            normal: {
+                color: '#20a4ad'
+            }
+        }
+    }, {
+        name: 'Ausralia',
+        value: 14.19,
+        itemStyle: {
+            normal: {
+                color: '#00B0F0'
+            }
+        }
+    }, {
+        name: 'Canada',
+        value: 12.66,
+        itemStyle: {
+            normal: {
+                color: '#55b0d1'
+            }
+        }
+    }, {
+        name: 'Switzerland',
+        value: 12.01,
+        itemStyle: {
+            normal: {
+                color: '#82ABBA'
+            }
+        }
+    }, {
+        name: 'New Zealand',
+        value: 5.46,
+        itemStyle: {
+            normal: {
+                color: '#bfe2ef'
+            }
+        }
+    }, {
+        name: 'Germany',
+        value: 3.49,
+        itemStyle: {
+            normal: {
+                color: '#A2b4ba'
+            }
+        }
+    }, {
+        name: 'Singerpore',
+        value: 3.49,
+        itemStyle: {
+            normal: {
+                color: '#488fa8'
+            }
+        }
+    }, {
+        name: 'France',
+        value: 3.06,
+        itemStyle: {
+            normal: {
+                color: '#5c7f89'
+            }
+        }
+    }, {
+        name: 'Hong Kong',
+        value: 2.84,
+        itemStyle: {
+            normal: {
+                color: '#373e40'
+            }
+        }
+    }]
+}];
 
-        // 指定图表的配置项和数据
-           var option = {
-            title: {
-                text: 'ECharts 入门示例'
-            },
-            tooltip: {},
-            legend: {
-                data:['销量']
-            },
-            xAxis: {
-                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
-            },
-            yAxis: {},
-            series: [{
-                name: '销量',
-                type: 'bar',
-                data: [5, 20, 36, 10, 10, 20]
-            }]
-        };
 
-        // 使用刚指定的配置项和数据显示图表。
+var option = {
+    title: {
+        text: 'Hottest Destination for Chinese Students, 2016',
+        left: 'center'
+    },
+    tooltip: {
+        trigger: 'item',
+        formatter: "{b}: {c}%"  //显示tooltip时，只显示name
+    },
+    toolbox: {
+        show: false,
+        feature: {
+            mark: {
+                show: true
+            },
+            dataView: {
+                show: true,
+                readOnly: false
+            },
+            restore: {
+                show: true
+            },
+            saveAsImage: {
+                show: true
+            }
+        }
+    },
+    calculable: false,
+    series: [{
+        name: '矩形图',
+        type: 'treemap',
+        width: 618,
+        height: 290,
+        itemStyle: {
+            normal: {
+                label: {
+                    show: true,
+                    //formatter: "{b}",
+                    fontSize: 15
+                },
+
+                borderWidth: 1
+            },
+            emphasis: {
+                label: {
+                    show: true
+                }
+            }
+        },
+        label: {
+            normal: {
+                textStyle: {
+                    fontSize: 15,
+                    //formatter: "{b}"
+                }
+            }
+        },
+        breadcrumb: {//关闭面包屑路径
+            show: false
+        },
+        roam: false,//关闭平移拖动
+        nodeClick: false,//关闭节点点击
+        silent: false,//关闭鼠标事件
+        data: rawData
+    }]
+};
         myChart.setOption(option);
     </script>
   
